@@ -14,25 +14,34 @@ const App: React.FC = () => {
     { name: "Python", level: "Avancé" },
   ];
 
-  const projects = [
-      {
+  const bio = 
+    "Étudiant en 3ème année à l'EPAC, filière Génie Informatique et Télécommunications (GIT), passionné par la cybersécurité, l'intelligence artificielle et le développement d'applications orientées sécurité.";
+
+  const projects: {
+    title: string;
+    description: string;
+    technologies: string[];
+    link: string;
+    status?: "En cours" | "Terminé";
+  }[] = [
+    {
       title: "Exoplanet AI",
-      description: "Identifications des exoplanètes à l'aide d'une IA entrainée par les données de la NASA",
-      technologies: ["Python","Django","render"],
+      description:
+        "Identification des exoplanètes à l'aide d'une IA entraînée avec des données de la NASA.",
+      technologies: ["Python", "Django", "Render"],
       link: "https://exoplanet-ai-584i.vercel.app/",
       status: "Terminé",
     },
-    
     {
       title: "Capture The Flag",
-      description: "Challenges CTF résolus en Python et Bash.",
-      technologies: ["Python", "Bash", "Kali Linux","Crypto"],
+      description: "Résolution de challenges CTF utilisant Python, Bash et outils offensifs.",
+      technologies: ["Python", "Bash", "Kali Linux", "Cryptanalyse"],
       link: "#",
       status: "En cours",
     },
     {
       title: "Analyse de vulnérabilités Web",
-      description: "Test de sécurité sur applications web avec Nmap et Burp Suite.",
+      description: "Audit de sécurité web avec Nmap, Burp Suite et Metasploit.",
       technologies: ["Nmap", "Burp Suite", "Metasploit"],
       link: "#",
       status: "En cours",
@@ -45,7 +54,7 @@ const App: React.FC = () => {
       <main className="flex-1 flex flex-col justify-between">
         <div>
           <Hero />
-          <About  skills={skills} />
+          <About skills={skills} bio={bio} />
           <Project projects={projects} />
         </div>
         <Contact />
