@@ -48,7 +48,7 @@ const Project: React.FC<ProjectProps> = ({ projects }) => {
               target="_blank"
               className="mt-4 text-[#0ea5e9] border-2 rounded-xl text-center font-semibold hover:underline"
             >
-              Voir le projet
+              Voir le 
             </a>
           </motion.div>
         ))}
